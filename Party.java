@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-public class Party
-{
+public class Party {
 	private static double userBudget;
 	private static double totalCost;
 	private static final double chairPrice = 8.50;
@@ -64,7 +63,7 @@ public class Party
 	public static void GetItems() throws Exception
 	{
 		String selectedItem = null;
-		Object[] array = { "Fork", "Spoon", "Chair", "Knife" };
+		Object[] array = { "Fork", "Spoon", "Chair", "Knife", "End Programm" };
 		
 			try
 			{
@@ -85,6 +84,8 @@ public class Party
 					case "Knife":
 						totalCost += GetItemCost(selectedItem, knifePrice);
 						break;
+					case "End Programm":
+						return;
 					default:
 						break;
 				}
